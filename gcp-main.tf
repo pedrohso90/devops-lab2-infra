@@ -1,22 +1,27 @@
 # Cria uma VM no Google Cloud
-resource "google_compute_instance" "firstvm" {
-  name         = "helloworld"
-  machine_type = "n1-standard-1"
-  zone         = "us-central1-c"
+#resource "google_compute_instance" "firstvm" {
+#  name         = "helloworld"
+#  machine_type = "n1-standard-1"
+#  zone         = "us-central1-c"
 
   # Defini a Imagem da VM
-  boot_disk {
-    initialize_params {
-      image = "ubuntu-1804-bionic-v20210415"
-    }
-  }
+#  boot_disk {
+#    initialize_params {
+#      image = "ubuntu-1804-bionic-v20210415"
+#    }
+#  }
 
   # Habilita rede para a VM com um IP público
-  network_interface {
-    network = "default" # Estamos usando a VPC default que já vem por padrão no projeto.
+#  network_interface {
+#    network = "default" # Estamos usando a VPC default que já vem por padrão no projeto.
 
-    access_config {
-    }
+#    access_config {
+#    }
     // A presença do bloco access_config, mesmo sem argumentos, garante que a instância estará acessível pela internet.
-  }
+#  }
+#}
+
+resource "google_app_engine_application" "app" {
+  project     = "eng-archery-321513"
+  location_id = "us-central"
 }
