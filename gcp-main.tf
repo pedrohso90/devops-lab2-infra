@@ -21,7 +21,7 @@
 #  }
 #}
 
-resource "google_app_engine_application" "app" {
+resource "google_app_engine_application" "test" {
   project     = "eng-archery-321513"
   location_id = "us-central"
 }
