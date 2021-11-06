@@ -21,7 +21,7 @@
 #  }
 #}
 
-resource "google_app_engine_application" "app" {
+resource "google_app_engine_application" "test" {
   project     = "devopscloud-331312"
   location_id = "us-central"
 }
